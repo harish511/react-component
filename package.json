@@ -1,0 +1,50 @@
+{
+  "name": "react-component",
+  "scripts": {
+    "build": "npm run build:dev && npm run build:prod",
+    "postbuild": "npm run es5",
+    "build:dev": "export NODE_ENV=dev && node ./node_modules/webpack/bin/webpack",
+    "build:prod": "export NODE_ENV=production && node ./node_modules/webpack/bin/webpack",
+    "lint": "eslint src",
+    "pretest": "npm run lint && npm run build",
+    "test": "node ./node_modules/karma/bin/karma start --single-run --no-auto-watch karma.config.js",
+    "es5": "node ./node_modules/babel-cli/bin/babel src --out-dir dist/es5"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-core": "6.4.0",
+    "babel-eslint": "4.1.6",
+    "babel-istanbul": "0.6.0",
+    "babel-istanbul-loader": "0.0.1",
+    "babel-loader": "6.2.1",
+    "babel-plugin-add-module-exports": "0.1.2",
+    "babel-preset-es2015": "6.24.1",
+    "chai": "3.5.0",
+    "eslint": "1.10.3",
+    "eslint-config-airbnb": "3.1.0",
+    "jasmine-core": "2.4.1",
+    "karma": "0.13.19",
+    "karma-chai": "0.1.0",
+    "karma-chrome-launcher": "^2.1.1",
+    "karma-coverage": "0.5.3",
+    "karma-jasmine": "0.3.6",
+    "karma-mocha": "1.3.0",
+    "karma-phantomjs-launcher": "1.0.0",
+    "karma-sourcemap-loader": "0.3.7",
+    "karma-webpack": "1.7.0",
+    "loader-utils": "0.2.12",
+    "mocha": "3.3.0",
+    "mocha-lcov-reporter": "1.3.0",
+    "phantomjs-prebuilt": "2.1.7",
+    "ramda": "^0.23.0",
+    "release-script": "1.0.2",
+    "rimraf": "2.5.0",
+    "webpack": "1.12.11",
+    "yargs": "7.1.0",
+    "babel-preset-react": "6.5.0"
+  },
+  "dependencies": {
+    "react": "15.0.2",
+    "react-dom": "15.0.2"
+  }
+}

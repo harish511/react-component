@@ -1,0 +1,10 @@
+*.log
+/.*/
+/build/
+/.eslint*
+/.gitignore
+/.npmignore
+/.travis.yml
+/webpack.*
+.DS_Store
+coverage
